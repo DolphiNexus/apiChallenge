@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>Map</title>
+    <style>
+       #map {
+        height: 400px;
+        width: 100%;
+       }
+    </style>
+    <style>
+   body {
+    background: #72AEF1
+}
+</style>
+  </head>
+
+<style>
+
+a {
+  text-decoration: none;
+  color: blue
+}
+
+h1, h2, h3 {
+  margin: 0;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('Roboto-ThinItalic-webfont.eot');
+    src: url('Roboto-ThinItalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Roboto-ThinItalic-webfont.woff') format('woff'),
+         url('Roboto-ThinItalic-webfont.ttf') format('truetype'),
+         url('Roboto-ThinItalic-webfont.svg#RobotoThinItalic') format('svg'); (under the Apache Software License). 
+    font-weight: 200;
+    font-style: italic;
+}
+
+#center {
+    text-align: center;
+}
+
+#container {
+  background-color: white;
+  width:800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#header {
+  background-color: #2c5b99;
+  color: black;
+  text-align: center;
+  padding: 10px
+}
+
+#content {
+  padding: 10px;
+}
+
+#nav {
+  width: 180px;
+  float: left;
+}
+
+#nav.selected{
+  font-weight:bold;
+}
+
+#main {
+  width:750px;
+  float: center;
+}
+
+#footer {
+  clear: both;
+  padding: 10px;
+  background-color: #2c5b99;
+  color: white;
+  text-align: right;
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: #333;
+    overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    background-color: #00b300;
+    color: black;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+    display: none;
+}
+</style>
+
+<script>
+  function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+</script>
+
+  <body>
+  <div class="topnav" id="myTopnav">
+  <a href="index.html">Home</a>
+  <a href="Lightbulb.html">Lightbulb</a>
+  <a href="Entreprenuer.html">Entreprenuer</a>
+  <a href="Journal.html">Journal</a>
+  <a href="googlemaps.html">Google Maps</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+<br/>
+
+     <div id="container">
+ <div id="header">
+   <h1>Jairo's Maps</h1>
+   </div>
+ 
+
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        var uluru = {lat: 34.036015, lng: -118.359907};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 14,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDVslykDWNSDSy4N3anSG-WOgz1WPtkAVY&callback=initMap">
+    </script>
+  </body>
+</html>
+
+   <div id="footer">
+    Copyright &copy; 2017 Jairo Mendoza
+   </div>
+  </div>
+ </body>
+</html>﻿

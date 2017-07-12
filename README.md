@@ -14,5 +14,4 @@ var uluru = {lat: 00.000000, lng: -000.000000};
 This is the API Challenge and it was a project that I underastood well. I will continue to learn about APIs and how to use it to their true potential.
 
 # Created By:
-Jairo Mendoza
-Developer for the team DolphiNexus(Dnex)
+Jairo Mendoza: Developer for the team DolphiNexus(Dnex)
